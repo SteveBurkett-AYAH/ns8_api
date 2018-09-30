@@ -9,6 +9,7 @@ Although I have used Express for several years, I am using Restify for this proj
 * The only required validation of the data is that required fields are present and that all users have a unique email address.  Several very good validation modules are availble to check the format of the data (e.g., is the 'email' property a valid email address). I'd recommend adding validation on the email and phone fields as well as adding some constraints to the 'password' and 'type' properties.
 * A simple 'range=last_day' query parameter can be used on the /users/events endpoint to limit events to the last day.
 * Error object can be simple. For a more complex API, I'd recommend more verbose error messages and/or adding a link to the documentation.
+* An 'id' property is not needed for the 'enents' objects.
 
 ## Implemented API Endpoints
 
@@ -31,7 +32,4 @@ API design.
 
 * PUT /users/{user_id} : Uses the POST data to update the user with the specified id.
 * DELETE /users/{user_id} : Deletes the user with the specified id.  This also deletes all events for the user.
-* GET /users/{user_id}/events/{event_id} : Returns the event with the specified id for the specified user.
-* PUT /users/{user_id}/events/{event_id} : Uses the POST data to update the event with the specified id for the specified user.
-* DELETE /users/{user_id}/events/{event_id} : Deletes the event with the specified id for the specified user..
 
