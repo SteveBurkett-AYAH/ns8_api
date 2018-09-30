@@ -25,6 +25,12 @@ class Repository {
     }
 
     addUser(data) {
+        if ( !data.email) {
+            throw new Error('The \'email\' property was not set in the user data.');
+        }
+        if ( !data.password) {
+            throw new Error('The \'password\' property was not set in the user data.');
+        }
         data.id = this._getNextUserId();
         this._users.push(data);
         debug('Added new user with id=' + data.id);
@@ -32,6 +38,9 @@ class Repository {
     }
 
     addEventForUser(user_id, data) {
+        if ( !data.type) {
+            throw new Error('The \'type\' property was not set in the user data.');
+        }
         if (this._findUserById(user_id)) {
             data.user_id = parseInt(user_id);
             data.created = (new Date()).getTime();
