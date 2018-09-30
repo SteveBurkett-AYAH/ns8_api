@@ -1,6 +1,8 @@
 # NS8 API
 This is sample code to create a very simpe API for the NS8 Technical Evaluation.
 
+Although I have used Express for several years, I am using Restify for this project simply to get some experience using it.  It also gives me an opportunity to compare the two Node frameworks.
+
 ## Implemented API Endpoints
 
 To meet the requirements of this test, only the following endpoints are implemented:
