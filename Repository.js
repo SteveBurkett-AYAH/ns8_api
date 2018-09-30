@@ -20,6 +20,11 @@ class Repository {
         return user;
     }
 
+    _findUserByEmail(email) {
+        debug('Finding user with email=' + email);
+        return this._users.find(user => user.email == email);
+    }
+
     _getNextUserId() {
         return this._users.length + 1;
     }
@@ -30,6 +35,9 @@ class Repository {
         }
         if ( !data.password) {
             throw new Error('The \'password\' property was not set in the user data.');
+        }
+        if ( this._findUserByEmail(data.email)) {
+            throw new Error('A user already exists with email=' + data.email);
         }
         data.id = this._getNextUserId();
         this._users.push(data);
