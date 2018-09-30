@@ -8,6 +8,7 @@ Although I have used Express for several years, I am using Restify for this proj
 * Only a subset of the full API endpoints need to be implemented for this evaluation.  I have implemented the basic Create and Read endpoints but did not implement the Update and Delete endpoints.  But I did document them below so that you can see the full API design.
 * The only required validation of the data is that required fields are present.  Several very good validation modules are availble.
 * A simple 'range=last_day' query parameter can be used on the /users/events endpoint to limit events to the last day.
+* Error object can be simple. For a more complex API, I'd recommend more verbose error messages and/or adding a link to the documentation.
 
 ## Implemented API Endpoints
 
