@@ -3,12 +3,17 @@ This is sample code to create a very simpe API for the NS8 Technical Evaluation.
 
 Although I have used Express for several years, I am using Restify for this project simply to get some experience using it.  It also gives me an opportunity to compare the two Node frameworks.
 
+## Assumptions
+* The endpoints do not need to be secure.  When needed, authorization could be added easily via middleware.
+* Only a subset of the full API endpoints need to be implemented for this evaluation.  I have implemented the basic Create and Read endpoints but did not implement the Update and Delete endpoints.  But I did document them below so that you can see the full API design.
+* The only required validation of the data is that required fields are present.  Several very good validation modules are availble.
+
 ## Implemented API Endpoints
 
 To meet the requirements of this test, only the following endpoints are implemented:
 
 ### Users
-* POST /users : Uses the POST data to create a new user.  Returns the id of the new user.
+* POST /users : Uses the POST data to create a new user.  Returns the new user.
 * GET /users : Returns all the users.
 * GET /users/{user_id} : Returns the user with the specified id.
 
