@@ -20,8 +20,8 @@ To meet the requirements of this test, only the following endpoints are implemen
 * GET /users/{user_id} : Returns the user with the specified id.
 
 ### Events
-* POST /users/{user_id}/events : Uses the POST data to create a new event for the specified user.  Returns the id of the new event.
-* GET /users/events : Returns all the events for all users.
+* POST /users/{user_id}/events : Uses the POST data to create a new event for the specified user.  Returns the new event.
+* GET /users/events : Returns all the events for all users.  The range=last_day query string parameter will limit the events returned to only those created in the last day.
 * GET /users/{user_id}/events : Returns all the events for the specified user.
 
 ## Not Implemented API Endpoints
