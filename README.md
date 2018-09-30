@@ -7,6 +7,7 @@ Although I have used Express for several years, I am using Restify for this proj
 * The endpoints do not need to be secure.  When needed, authorization could be added easily via middleware.
 * Only a subset of the full API endpoints need to be implemented for this evaluation.  I have implemented the basic Create and Read endpoints but did not implement the Update and Delete endpoints.  But I did document them below so that you can see the full API design.
 * The only required validation of the data is that required fields are present.  Several very good validation modules are availble.
+* A simple 'range=last_day' query parameter can be used on the /users/events endpoint to limit events to the last day.
 
 ## Implemented API Endpoints
 
