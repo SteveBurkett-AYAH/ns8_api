@@ -36,13 +36,13 @@ API design.
 
 ## How to Run and Test
 
-* Clone the repo and start the application:
+Clone the repo and start the application:
 
     git clone git@github.com:SteveBurkett-AYAH/ns8_api.git
     cd ns8_api
     DEBUG=* node ApiServer.js
 
-* Use Postman to test the endpoints.  The base URL is:
+Use Postman to test the endpoints.  The base URL is:
 
     http://localhost:3000/users
 
