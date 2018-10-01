@@ -4,6 +4,7 @@ This is sample code to create a very simpe API for the NS8 Technical Evaluation.
 Although I have used Express for several years, I am using Restify for this project simply to get some experience using it.  It also gives me an opportunity to compare the two Node frameworks.
 
 ## Assumptions
+* Unit tests are not required. For this evaluation I used Postman to test the endpoints and did not create any unit tests. I'd definitely recommend adding unit tests to make the testing process much easier, consistent and reliable.
 * The endpoints do not need to be secure.  When needed, authorization could be added easily via middleware.
 * Only a subset of the full API endpoints need to be implemented for this evaluation.  I have implemented the basic Create and Read endpoints but did not implement the Update and Delete endpoints.  But I did document them below so that you can see the full API design.
 * The only required validation of the data is that required fields are present and that all users have a unique email address.  Several very good validation modules are availble to check the format of the data (e.g., is the 'email' property a valid email address). I'd recommend adding validation on the email and phone fields as well as adding some constraints to the 'password' and 'type' properties.
@@ -32,4 +33,16 @@ API design.
 
 * PUT /users/{user_id} : Uses the POST data to update the user with the specified id.
 * DELETE /users/{user_id} : Deletes the user with the specified id.  This also deletes all events for the user.
+
+## How to Run and Test
+
+* Clone the repo and start the application:
+
+    git clone git@github.com:SteveBurkett-AYAH/ns8_api.git
+    cd ns8_api
+    DEBUG=* node ApiServer.js
+
+* Use Postman to test the endpoints.  The base URL is:
+
+    http://localhost:3000/users
 
